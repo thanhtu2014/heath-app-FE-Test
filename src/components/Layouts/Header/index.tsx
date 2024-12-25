@@ -1,10 +1,8 @@
-'use client';
-import React from 'react';
-import { HEADER, MENU_MOBILE } from '../../../constants';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { HEADER, MENU_MOBILE } from '@/constants';
 
-export default function Header() {
+const Header = () => {
   const location = useLocation();
   console.log(location);
   const [isOpen, setIsOpen] = useState(false);
@@ -91,3 +89,5 @@ export default function Header() {
     </div>
   );
 }
+
+export default Header;
